@@ -67,8 +67,8 @@ const SplineKeyboard = ({ currentSection }) => {
           calculatedX = windowWidth - 550;
           gsap.to(keyboard, {
             x: calculatedX,
-            y: 100,
-            scale: 0.7,
+            y: -10,
+            scale: 0.6,
             duration: 1,
             ease: "power2.out",
           });
