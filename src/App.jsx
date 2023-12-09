@@ -1,25 +1,15 @@
+import { useState, useEffect, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-import {
-  Contact,
-  Experience,
-  Feedbacks,
-  Navbar,
-  Tech,
-  Works,
-  StarsCanvas,
-} from "./components";
+import { Contact, Experience, Feedbacks, Navbar, Tech, Works, StarsCanvas, Hero, About} from "./components";
 import SplineKeyboard from "./components/SplineKeyboard";
-import { useState, useEffect, lazy, Suspense } from "react";
 import { navLinks } from "./constants";
-const Hero = lazy(() => import("./components/Hero"));
-const About = lazy(() => import("./components/About"));
 
 const App = () => {
   const [currentSection, setCurrentSection] = useState("");
 
   useEffect(() => {
     const handleKeyPress = (event) => {
-      // Cambiar a la sección correspondiente cuando se presiona una tecla del 1 al 6
+      // Cambiar a la sección correspondiente cuando se presiona una tecla del 1 al 4
       if (event.key >= "1" && event.key <= "4") {
         const section = navLinks[parseInt(event.key) - 1].title;
         setCurrentSection(section);
@@ -44,11 +34,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="h-full w-full overflow-hidden">
+        <Suspense fallback={<LoadingFallback />}>
           <SplineKeyboard currentSection={currentSection} />
+        </Suspense>
         <div className="relative z-0 bg-primary h-full w-full">
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
             <Navbar />
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingFallback />}>
               <Hero id="part1" />
             </Suspense>
           </div>
@@ -68,5 +60,8 @@ const App = () => {
     </BrowserRouter>
   );
 };
+
+// Componente de carga personalizado
+const LoadingFallback = () => <div>Loading...</div>;
 
 export default App;

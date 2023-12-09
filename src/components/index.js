@@ -1,15 +1,24 @@
-import { SpaceShipCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
-import Hero from "./Hero";
-import Navbar from "./Navbar";
-import About from "./About";
-import Tech from "./Tech";
-import Experience from "./Experience";
-import Works from "./Works";
-import Feedbacks from "./Feedbacks";
-import Contact from "./Contact";
+import { lazy } from "react";
+
+import {
+  SpaceShipCanvas,
+  BallCanvas,
+  ComputersCanvas,
+  StarsCanvas
+} from "./canvas";
+
+// Componentes
+const Hero = lazy(() => import ("./Hero"));
+const Navbar = lazy(() => import ("./Navbar"));
+const About = lazy(() => import("./About"));
+const Tech = lazy(() => import("./Tech"));
+const Experience = lazy(() => import("./Experience"));
+const Works = lazy(() => import("./Works"));
+const Feedbacks = lazy(() => import("./Feedbacks"));
+const Contact = lazy(() => import("./Contact"));
 import CanvasLoader from "./Loader";
 
-
+// Exportaciones
 export {
   Hero,
   Navbar,
@@ -20,8 +29,8 @@ export {
   Feedbacks,
   Contact,
   CanvasLoader,
-  SpaceShipCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
+  SpaceShipCanvas,
+  BallCanvas,
+  ComputersCanvas,
   StarsCanvas
 };
