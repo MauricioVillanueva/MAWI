@@ -18,7 +18,7 @@ const SplineKeyboard = ({ currentSection }) => {
 
     window.addEventListener("resize", handleResize);
 
-    let calculatedX = windowWidth - 800; // Ajusta este valor según tus necesidades
+    let calculatedX = windowWidth - 800; 
 
     gsap.to(keyboard, {
       x: calculatedX,

@@ -3,7 +3,6 @@ import { lazy } from "react";
 import {
   SpaceShipCanvas,
   BallCanvas,
-  ComputersCanvas,
   StarsCanvas
 } from "./canvas";
 
@@ -31,6 +30,5 @@ export {
   CanvasLoader,
   SpaceShipCanvas,
   BallCanvas,
-  ComputersCanvas,
   StarsCanvas
 };
