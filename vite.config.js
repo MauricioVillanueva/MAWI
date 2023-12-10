@@ -6,8 +6,5 @@ export default defineConfig({
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 3000,
-    rollupOptions: {
-      external: ['/src/main.jsx'], // Agrega cualquier ruta que quieras excluir del bundle
-    },
   },
 });
