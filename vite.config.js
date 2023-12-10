@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 3000,
     rollupOptions: {
-      external: ['/dist/main.jsx'], // Agrega cualquier ruta que quieras excluir del bundle
+      external: ['/src/main.jsx'], // Agrega cualquier ruta que quieras excluir del bundle
     },
   },
 });
