@@ -18,6 +18,7 @@
     "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.518",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "framer-motion": "^10.16.5",
     "gsap": "^3.12.3",
     "maath": "^0.10.4",

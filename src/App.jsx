@@ -1,5 +1,4 @@
 import { useState, useEffect, Suspense } from "react";
-import { BrowserRouter } from "react-router-dom";
 import { Contact, Experience, Feedbacks, Navbar, Tech, Works, StarsCanvas, Hero, About} from "./components";
 import SplineKeyboard from "./components/SplineKeyboard";
 import { navLinks } from "./constants";
@@ -32,7 +31,6 @@ const App = () => {
   }, [currentSection]);
 
   return (
-    <BrowserRouter>
       <div className="h-full w-full overflow-hidden">
         <Suspense fallback={<LoadingFallback />}>
           <SplineKeyboard currentSection={currentSection} />
@@ -57,7 +55,6 @@ const App = () => {
           </div>
         </div>
       </div>
-    </BrowserRouter>
   );
 };
 
