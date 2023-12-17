@@ -2,7 +2,7 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, figma } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -13,7 +13,8 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
+  figmaLink,
+  githubLink
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -32,9 +33,19 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover gap-x-2">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(figmaLink, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            >
+              <img
+                src={figma}
+                alt="source code"
+                className="w-1/2 h-1/2 object-contain"
+              />
+            </div>
+            <div
+              onClick={() => window.open(githubLink, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
@@ -72,7 +83,8 @@ ProjectCard.propTypes = {
   description: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   image: PropTypes.string.isRequired,
-  source_code_link: PropTypes.string.isRequired,
+  figmaLink: PropTypes.string.isRequired,
+  githubLink: PropTypes.string.isRequired
 };
 
 const Works = () => {

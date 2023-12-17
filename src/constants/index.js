@@ -236,7 +236,8 @@ import {
         },
       ],
       image: NEOGN,
-      source_code_link: "https://github.com/",
+      githubLink: "https://github.com/",
+      figmaLink: "https://www.figma.com/file/XW5R5igJ6SnnQeCgmzqFES/NEOGN?type=design&node-id=0%3A1&mode=design&t=Dgm0vbhEIzM62dC4-1"
     },
     {
       name: "HYBRD",
@@ -265,7 +266,8 @@ import {
         },
       ],
       image: HYBRD,
-      source_code_link: "https://github.com/",
+      figmaLink:"https://www.figma.com/file/zAuhAIeoueeCtLgAfqHDn5/HYBRD?type=design&node-id=0%3A1&mode=design&t=aIG0OUh8KZvsvYUT-1",
+      githubLink: "https://github.com/",
     },
     {
       name: "MAWI",
