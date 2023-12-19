@@ -296,7 +296,7 @@ import {
         },
       ],
       image: MAWI,
-      source_code_link: "https://github.com/",
+      githubLink: "https://github.com/MauricioVillanueva/MAWI",
     },
   ];
   
