@@ -30,7 +30,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    console.log("Form Data:", form);
 
     emailjs
       .send(
